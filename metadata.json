@@ -1,0 +1,7 @@
+{
+  "name": "ज्येष्ठ गौरी आगमन निमंत्रण",
+  "description": "बोस्टे परिवाराचे पारंपरिक ज्येष्ठ गौरी आगमन डिजिटल निमंत्रण पत्रिका २०२६",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

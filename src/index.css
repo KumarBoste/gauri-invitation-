@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mukta: 'Mukta', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-poppins: 'Poppins', 'Mukta', sans-serif;
+  --font-simple: 'Mukta', 'Poppins', sans-serif;
+  --font-rozha: 'Poppins', 'Mukta', sans-serif;
+  --font-yatra: 'Poppins', 'Mukta', sans-serif;
+  --font-gotu: 'Mukta', 'Poppins', sans-serif;
+  --font-tiro: 'Mukta', 'Poppins', sans-serif;
+
+  --color-maroon: #7b0a1a;
+  --color-deep-red: #9e1b26;
+  --color-gold: #dfa838;
+  --color-gold-light: #fef1cf;
+  --color-dark-gold: #b37f1c;
+  --color-bg-cream: #fffaf0;
+  --color-text-dark: #3a1318;
+}
+
+/* Simple Clean Marathi Typography Utility Classes */
+.font-mukta {
+  font-family: 'Mukta', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.font-poppins {
+  font-family: 'Poppins', 'Mukta', sans-serif;
+}
+.font-simple {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+}
+/* Backward-compatible alias mappings to guarantee 100% simple Marathi font rendering */
+.font-rozha {
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-weight: 700;
+}
+.font-yatra {
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-weight: 700;
+}
+.font-gotu {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+}
+.font-tiro {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+}
+
+/* Base Body settings - Clean, Simple Marathi Font (Mukta) */
+body {
+  font-family: 'Mukta', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #230206;
+  color: #3a1318;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Festive pattern backgrounds */
+.bg-festive-pattern {
+  background-color: #fffaf0;
+  background-image: radial-gradient(#dfa838 0.75px, transparent 0.75px), radial-gradient(#9e1b26 0.75px, #fffaf0 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-mandala-subtle {
+  background-color: #fffcf5;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23dfa838' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M30 30L15 0H0l30 60 30-60H45L30 30z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Shimmer & Glow Effects */
+@keyframes goldShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, #b37f1c, #f9e29a, #dfa838, #fdf2d0, #b37f1c);
+  background-size: 250% 250%;
+  animation: goldShimmer 4s ease infinite;
+}
+
+@keyframes diyaFlicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8)); }
+  50% { transform: scale(1.08) rotate(1deg); opacity: 1; filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.95)); }
+}
+
+.animate-diya {
+  animation: diyaFlicker 1.5s ease-in-out infinite alternate;
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+/* Golden text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #b37f1c 0%, #dfa838 50%, #f9e29a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
